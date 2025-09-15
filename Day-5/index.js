@@ -1,0 +1,11 @@
+console.log("Welcome to the FSD Session");
+document.write("Welcome to the FSD Session");
+document.writeln("<h1>Welcome to the FSD Session</h1>");
+document.write("<h2>Welcome to the FSD Session</h2>");
+document.write("<h3>Welcome to the FSD Session</h3>");
+document.write("<h4>Welcome to the FSD Session</h4>");
+document.write("<h5>Welcome to the FSD Session</h5>");
+document.write("<h6>Welcome to the FSD Session</h6>");
+alert("Welcome to the FSD Session");
+confirm("Welcome to the FSD Session");
+prompt("Welcome to the FSD Session");
