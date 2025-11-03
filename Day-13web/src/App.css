@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Vertically centers items */
+  height: 100px;
+  background-color: rgb(53, 119, 110);
+  color: white; /* Added for readability */
+}
+
+.header-logo {
+  /* You can add styles for your logo here */
+  height: 80px;
+}
+
+.nav-list {
+  display: flex;
+  padding: 10px;
+  margin: 0px;
+  list-style-type: none;
+  font-size: 25px;
+  gap: 30px; /* Adds space between "Home", "cost", etc. */
+}
+
+.body-container {
+  padding: 20px; /* Adds some space around the body */
+}
+
+.prod-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows products to wrap to the next line */
+  gap: 20px; /* Adds space between products */
+  justify-content: center; /* Centers the products */
+}
+
+.product {
+  background-color: rgb(230, 230, 230);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.prod-img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  margin-top: 20px;
+}

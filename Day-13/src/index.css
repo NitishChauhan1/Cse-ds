@@ -1,0 +1,24 @@
+@import "tailwindcss";
+/* @tailwind base;
+@tailwind components; */
+@tailwind utilities;
+
+/* Smooth scrolling and default font */
+html {
+scroll-behavior: smooth;
+font-family: 'Inter', sans-serif;
+background-color: #000;
+color: #fff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+width: 8px;
+}
+::-webkit-scrollbar-thumb {
+background-color: #10b981;
+border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+background: #111;
+}
