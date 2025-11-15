@@ -1,25 +1,33 @@
 import { useState } from "react";
 import InputToDo from "./Components/InputToDo.jsx";
+
 function App() {
   const [todoList, setTodoList] = useState([]);
-  const inputHandler = (inputVal) => {
-    setTodoList([...todoList, inputVal]);
+
+  // Add new todo (pure functional update)
+  const addTodo = (inputVal) => {
+    setTodoList((prev) => [...prev, inputVal]);
   };
-  const deleteHandler = (index) => {
-    let newList = [...todoList];
-    newList.splice(index, 1);
-    setTodoList(newList);
+
+  // Delete item by index
+  const deleteTodo = (index) => {
+    setTodoList((prev) => prev.filter((_, i) => i !== index));
   };
+
   return (
     <div className="todo-list">
       <h2>TODO LIST</h2>
-      {todoList.map((data, index) => (
-        <li key={index}>
-          {data}
-          <button onClick={() => deleteHandler(index)}>DEL</button>
-        </li>
-      ))}
-      <InputToDo inputHandler={inputHandler} />
+
+      <ul>
+        {todoList.map((item, index) => (
+          <li key={index}>
+            {item}
+            <button onClick={() => deleteTodo(index)}>DEL</button>
+          </li>
+        ))}
+      </ul>
+
+      <InputToDo inputHandler={addTodo} />
     </div>
   );
 }
