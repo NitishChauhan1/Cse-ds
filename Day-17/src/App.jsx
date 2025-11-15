@@ -4,12 +4,11 @@ import InputToDo from "./Components/InputToDo.jsx";
 function App() {
   const [todoList, setTodoList] = useState([]);
 
-  // Add new todo (pure functional update)
+
   const addTodo = (inputVal) => {
     setTodoList((prev) => [...prev, inputVal]);
   };
 
-  // Delete item by index
   const deleteTodo = (index) => {
     setTodoList((prev) => prev.filter((_, i) => i !== index));
   };
